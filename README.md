@@ -4,7 +4,7 @@
 </div>
 <div align="center">
   
-  ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Taeyeon-0314&include_all_commits=true&show_icons=true&theme=radical)
+  ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Taeyeon-0314&rank_icon=github&include_all_commits=true&show_icons=true&theme=radical)
   
 </div>
 <h3 align="center">✨ Tech Stack ✨</h3>
