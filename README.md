@@ -1,7 +1,7 @@
 <div><h1>👋 안녕하세요. </h1></div>
 
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Taeyeon-0314&show_icons=true&theme=radical)
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Taeyeon-0314&layout=donut&theme=dracula)](https://github.com/Taeyeon-0314)
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Taeyeon-0314\&include_all_commits=true&show_icons=true&theme=radical)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Taeyeon-0314\&include_all_commits=true&langs_count=8&layout=donut&theme=dracula)](https://github.com/Taeyeon-0314)
 
 
 <h3 align="center">✨ Tech Stack ✨</h3>
