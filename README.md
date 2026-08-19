@@ -32,7 +32,7 @@ const taeyeon = {
 
 <div align="center">
 
-  <img src="https://streak-stats.demolab.com?user=Taeyeon-0314&theme=tokyonight&hide_border=true&border_radius=8" alt="GitHub Streak" />
+  <img src="./profile/streak.svg" alt="GitHub Streak" />
 
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=Taeyeon-0314&theme=tokyo-night&hide_border=true&area=true&radius=8" alt="Activity Graph" />
 
