@@ -1,0 +1,39 @@
+# 스트릭 카드를 정적 SVG로 만들어 저장소에 커밋한다.
+# 외부 서비스(streak-stats.demolab.com)가 6~20초씩 걸려 GitHub camo 프록시가
+# 4초에 포기하고 "Error Fetching Resource" 를 뱉던 문제를 없애기 위함이다.
+name: Update streak stats
+
+on:
+  schedule:
+    # 매일 14:00 UTC = 23:00 KST. 22시 자동 커밋 뒤에 돌려 그날 잔디까지 반영한다.
+    - cron: "0 14 * * *"
+  push:
+    paths:
+      - ".github/workflows/streak-stats.yml" # 이 파일을 고칠 때마다 즉시 재생성
+  workflow_dispatch: # Actions 탭에서 수동 실행
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate streak stats
+        uses: DenverCoder1/github-readme-streak-stats@main
+        with:
+          # disable_animations 은 필수다. 애니메이션 SVG 는 opacity:0 으로 시작해서
+          # GitHub 이 <style> 을 걸러내면 카드가 통째로 안 보인다.
+          options: user=${{ github.repository_owner }}&theme=tokyonight&hide_border=true&border_radius=8&disable_animations=true
+          path: profile/streak.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit streak stats
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/streak.svg
+          git commit -m "chore: 스트릭 카드 갱신" || exit 0
+          git push
